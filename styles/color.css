@@ -144,22 +144,71 @@
     .navbar, .nav-link ,.teams{
         flex-direction: column;
     } 
-    .tem-img-container{
+    .tem-img-container, .facts-container{
       grid-template-columns: repeat(1,1fr);
 
     
     } 
+    .facts-container{
+      /* costomize for allucaion  */
+      justify-items: center;
+      gap: 24px;
+    }
     .our-featurs{
       margin-left: 20px;
     }
- } 
+ }
+  /*sponsor related styles  */
+   .sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+   }
+   .sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+
+   }
+   /* ami amr moro kortechi */
+   /* .ami{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+
+   } */
+   .sponsor-companies img{
+    filter: grayscale(100%);
+    
+   }
  /* medium size device */
  @media screen and (min-width:576px)and (max-width:992px){
   .teams{
     flex-direction: column;
   }
+  .team-img-container,
+   .facts-container,
+   .sponsor-companies
+   {
+    grid-template-columns:1fr;
+  }
+  
+   
+  .facts-container,{
+    justify-items: center;
+    gap: 24px;
+
+  }
+  .sponsor-companies{
+    grid-template-columns: repeat(3,1fr);
+  }
+
   .our-featurs{
     margin:50px auto;
 
+  }
+  .sponsor-companies,.facts-container{
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+    justify-items: center;
+    
   }
  }
